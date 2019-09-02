@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 body {
   background: image_url("qbkls.png");
   font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
@@ -32,3 +33,11 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+
+.navbar-inverse .navbar-brand {
+    color: #6d95df;
+    font-family: "source_sans_proregular";
+    font-size: 20px;
+    letter-spacing: -0.3px;
+  }
