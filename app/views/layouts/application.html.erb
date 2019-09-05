@@ -25,14 +25,23 @@
         <li class="nav-item">
 
           <%= link_to new_place_path, class: 'nav-link' do %>
-            <i class="fa fa-plus-circle"></i>
-            New Place
+          <i class="fa fa-plus-circle"></i>
+          New Place
           <% end %>
 
         </li>
       </ul>
     </div>
   </nav>
+
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+  
   <%= yield %>
 
 
