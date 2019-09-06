@@ -35,10 +35,16 @@ h6 {
   padding: 0;
 }
 
-
 .navbar-inverse .navbar-brand {
-    color: #6d95df;
-    font-family: "source_sans_proregular";
-    font-size: 20px;
-    letter-spacing: -0.3px;
-  }
+  color: #6d95df;
+  font-family: "source_sans_proregular";
+  font-size: 20px;
+  letter-spacing: -0.3px;
+}
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #ffeeee;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
