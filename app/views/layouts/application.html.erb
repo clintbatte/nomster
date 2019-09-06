@@ -23,25 +23,34 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         <li class="nav-item">
-
           <%= link_to new_place_path, class: 'nav-link' do %>
           <i class="fa fa-plus-circle"></i>
           New Place
           <% end %>
-
         </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+        </li>
+        <% end %>
       </ul>
     </div>
   </nav>
 
   <% if notice.present? %>
-    <p class="notice"><%= notice %></p>
+  <p class="notice"><%= notice %></p>
   <% end %>
 
   <% if alert.present? %>
-    <p class="alert"><%= alert %></p>
+  <p class="alert"><%= alert %></p>
   <% end %>
-  
+
   <%= yield %>
 
 
