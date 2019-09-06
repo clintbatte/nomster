@@ -4,7 +4,6 @@ class PlacesController < ApplicationController
     def index
         @places = Place.all
         @pagy, @places = pagy(Place.all, items: 5)
-
     end
 
     def new
@@ -12,9 +11,12 @@ class PlacesController < ApplicationController
     end
 
     def create
-        #Place.create(place_params)
         current_user.places.create(place_params)
         redirect_to root_path
+    end
+
+    def show
+        @place = Place.find(params[:id])
     end
     
     private
