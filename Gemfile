@@ -87,3 +87,6 @@ gem 'geocoder'
 
 # figaro
 gem 'figaro'
+
+#carrierwave
+gem 'carrierwave', '~> 1.0'
