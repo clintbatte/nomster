@@ -7,7 +7,7 @@
   <script>
     function initMap() {
       var myLatLng = {
-        lat: <%= @place.latitude %> ,
+        lat: <%= @place.latitude %>,
         lng: <%= @place.longitude %>
       };
 
@@ -126,7 +126,7 @@
   <% @place.photos.each do |photo| %>
     <div class="col-10 offset-1">
       <% if photo.picture.present? %>
-        <%= image_tag photo.picture, class: 'img-fluid' %>
+        <%= image_tag photo.picture.url, class: 'img-fluid' %>
       <% end %>
       <% if photo.caption.present? %>
         <%= photo.caption %></p>
