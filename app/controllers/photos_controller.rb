@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 class PhotosController < ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
 
-    def create
-        @place = Place.find(params[:place_id])
-        @place.photos.create(photo_params.merge(user: current_user))
-        redirect_to place_path(@place)
-    end
+  def create
+    @place = Place.find(params[:place_id])
+    @place.photos.create(photo_params.merge(user: current_user))
+    redirect_to place_path(@place)
+  end
 
-    private
+  private
 
-    def photo_params
-        params.require(:photo).permit(:caption, :place_id, :picture)
-    end
+  def photo_params
+    params.require(:photo).permit(:caption, :place_id, :picture)
+  end
 end
