@@ -93,3 +93,6 @@ gem 'carrierwave', '~> 1.0'
 
 #fog-aws
 gem 'fog-aws'
+
+#hirb
+gem 'hirb'
